@@ -9,12 +9,13 @@ public class Main {
 
         Pedidos pedidos = new Pedidos(1, new Date(), 50, "Entregado", "Sauces 8", 23, "Dulzura", "domingo comin entre garcia agollena y la 24 va", "https://dulzura206.cms.webnode.ec/", "0986030552", "Francisco de orellana y Urdesa", "Panaderia_dulzura");
 
-
         pedidos.Solicitar(); 
 
         pedidos.cancelarPedido();
 
-        Panaderia panaderia = new Panaderia(23 , "Dulzura", "domingo comin entre garcia agollena y la 24 va", "https://dulzura206.cms.webnode.ec/", "0986030552", "Francisco de orellana y Urdesa", "Panaderia_dulzura");
+        pedidos.solicitarDirección();
+
+        Panaderia panaderia = new Panaderia(23 , "Dulzura", " domingo comin entre garcia agollena y la 24 va", "https://dulzura206.cms.webnode.ec/", "0986030552", "Francisco de orellana y Urdesa", "Panaderia_dulzura");
 
         panaderia.agregarNombre();
 
@@ -66,6 +67,8 @@ public class Main {
         productos.calcularelpreciodelproducto();
 
         productos.agregarcalidaddelproducto();
+
+        productos.solicitarDirección();
 
         List<Inventario> INVENTARIO_INPUT = Arrays.asList(
         new Inventario("Pan", "Enrrollado"),
